@@ -1,17 +1,16 @@
+
 ---
 spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: ${vcap.services.config-server-uri.credentials.uri}     
-          
----
-security:
-  user:
-    username:  ${vcap.services.connfig-basic-auth.credentials.username}
-    password:  ${vcap.services.connfig-basic-auth.credentials.password}
----
-spring:
-   profiles cloud
-message: Morgan
+  profiles: local
+  
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost/company
+    username: user
+    password: password
+    driver-class-name: com.mysql.jdbc.Driver
