@@ -11,7 +11,7 @@ security:
   user:
     username:  ${vcap.services.connfig-basic-auth.credentials.username}
     password:  ${vcap.services.connfig-basic-auth.credentials.password}
----
+
 spring:
    profiles cloud
 message: Morgan
