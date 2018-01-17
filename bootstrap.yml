@@ -1,0 +1,16 @@
+--- 
+management:
+  security:
+    enabled: false
+
+security:
+  basic:
+    enabled: false
+
+    
+spring: 
+  application: 
+    name: company
+    server: 
+      git: 
+        uri: "${vcap.services.config-server-uri.credentials.uri}"
