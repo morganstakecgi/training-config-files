@@ -8,8 +8,8 @@ spring:
           
 security:
   user:
-    username:  ${vcap.services.config-basic-auth.credentials.username}
-    password:  ${vcap.services.config-basic-auth.credentials.password}
+    username:  ${vcap.services.config-basic-auth.credentials.username:morgan}
+    password:  ${vcap.services.config-basic-auth.credentials.password:morgan}
 
 spring:
    profiles cloud
