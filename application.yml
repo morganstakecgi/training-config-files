@@ -7,7 +7,9 @@ eureka:
  client:
    serviceUrl:
      defaultZone: http://morgan:morgan@eureka-mas.cfapps.io/eureka
- instance: ${vcap.application.uris[0]}
- nonSecurePort: 80
+ instance:
+   hostname: ${vcap.application.uris[0]}
+   nonSecurePort: 80
+    
 
 
