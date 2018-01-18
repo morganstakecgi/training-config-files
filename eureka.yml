@@ -9,8 +9,6 @@ eureka:
  client:
    register-with-eureka: false
    fetch-registry: false
-   serviceUrl:
-      defaultZone: http://morgan:morgan@https://eureka-mas.cfapps.io/eureka
 
  server:
    waitTimeInMsWhenSyncEmpty: 0
@@ -20,5 +18,3 @@ security:
  user:
    name: ${vcap.services.eureka-basic-auth.credentials.username}
    password: ${vcap.services.eureka-basic-auth.credentials.password}
-
-
