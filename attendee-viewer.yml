@@ -8,3 +8,8 @@ spring:
    profiles:cloud
 
 message: attendees
+
+    
+feign:
+  hystrix:
+    enabled: true
