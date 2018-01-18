@@ -15,3 +15,8 @@ spring:
    profiles: cloud
 
 message: eureka Message
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://morgan:morgan@https://eureka-mas.cfapps.io/eureka
+
