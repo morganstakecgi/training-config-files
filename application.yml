@@ -1,15 +1,29 @@
-
 ---
 spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: ${vcap.services.config-server-uri.credentials.uri}     
-          
+  jpa:
+    hibernate: 
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect 
 ---
-security:
-  user:
-    username:  ${vcap.services.connfig-basic-auth.credentials.username}
-    password:  ${vcap.services.connfig-basic-auth.credentials.password}
-
+spring:
+  profiles: local
+  
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost/company
+    username: user
+    password: password
+    driver-class-name: com.mysql.jdbc.Driver
+    
+---
+spring:
+    profiles: cloud
+    
+message: Morgan Wrote it
