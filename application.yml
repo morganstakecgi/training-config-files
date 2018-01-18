@@ -30,6 +30,6 @@ message: Morgan Wrote it
 eureka:
  client:
    serviceUrl:
-     defaultZone: http://morgan:morgan@{https://eureka-mas.cfapps.io/eureka
+     defaultZone: http://morgan:morgan@https://eureka-mas.cfapps.io/eureka
  instance: ${vcap.application.uris[0]}
  nonSecurePort: 80
