@@ -4,7 +4,7 @@ spring:
     config:
       server:
         git:
-          uri: ${vcap.services.config-server-uri.credentials.uri}     
+          uri: ${vcap.services.config-server.credentials.uri}     
           
 security:
   user:
