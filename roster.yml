@@ -8,7 +8,7 @@ spring:
           
 security:
   user:
-    username:  ${vcap.services.config-basic-auth.credentials.username}
+    name:  ${vcap.services.config-basic-auth.credentials.username}
     password:  ${vcap.services.config-basic-auth.credentials.password}
 ---
 spring:
