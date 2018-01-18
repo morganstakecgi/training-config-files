@@ -3,6 +3,7 @@ spring:
   cloud:
     config:
       server:
+        port: 8101
         git:
           uri: ${vcap.services.config-server.credentials.uri}     
           
