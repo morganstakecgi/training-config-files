@@ -1,12 +1,4 @@
 ---
-spring:
-  cloud:
-    config:
-      server:
-        port: 8101
-        git:
-          uri: ${vcap.services.config-server.credentials.uri}     
-          
 security:
   user:
     name:  ${vcap.services.config-basic-auth.credentials.username}
