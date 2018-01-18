@@ -1,17 +1,11 @@
 ---
 spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: ${vcap.services.config-server-uri.credentials.uri}     
-          
-security:
-  user:
-    name:  ${vcap.services.config-basic-auth.credentials.username}
-    password:  ${vcap.services.config-basic-auth.credentials.password}
----
-spring:
-   profiles:cloud
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  jackson:
+    default-property-inclusion: NON_NULL
 
-message: roster Message
+endpoints:
+  sensitive: false
