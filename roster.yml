@@ -6,11 +6,6 @@ spring:
     show-sql: true
   jackson:
     default-property-inclusion: NON_NULL
-  cloud:
-    config:
-      server:
-        git:
-          uri: ${vcap.services.config-server-uri.credentials.uri}     
        
 endpoints:
   sensitive: false
