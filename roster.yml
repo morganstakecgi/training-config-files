@@ -9,3 +9,13 @@ spring:
 
 endpoints:
   sensitive: false
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${vcap.services.config-server-uri.credentials.uri}     
+          
+security:
+  user:
+    name:  ${vcap.services.config-basic-auth.credentials.username}
+    password:  ${vcap.services.config-basic-auth.credentials.password}
